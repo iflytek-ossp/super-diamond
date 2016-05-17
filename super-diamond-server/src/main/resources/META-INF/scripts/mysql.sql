@@ -1,4 +1,4 @@
-CREATE DATABASE edu_diamond;
+CREATE DATABASE super_diamond;
 
 CREATE TABLE `CONF_USER` (
   `ID` int(11) NOT NULL,

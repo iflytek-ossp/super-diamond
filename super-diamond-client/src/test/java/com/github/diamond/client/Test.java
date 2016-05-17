@@ -4,6 +4,7 @@
  * Test.java Create on 2013-7-11 下午4:48:04
  */
 package com.github.diamond.client;
+
 import javax.naming.ConfigurationException;
 
 /**
@@ -18,10 +19,11 @@ public class Test {
 	 * @throws ConfigurationException
 	 */
 	public static void main(String[] args) throws Exception {
-		PropertiesConfiguration config = new PropertiesConfiguration("localhost", 8283, "cloud-service", "development", "jdbc");
+		PropertiesConfiguration config = new PropertiesConfiguration("192.168.45.175", 8283, "test", "development",
+				"mysql-biz");
 		config.addConfigurationListener(new ConfigurationListenerTest());
 		System.out.println(config.getString("jdbc.url"));
-		
+
 		System.in.read();
 	}
 
